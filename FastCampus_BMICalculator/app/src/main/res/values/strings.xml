@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">BMICalculator</string>
+    <string name="height">신장</string>
+    <string name="width">체중</string>
+</resources>

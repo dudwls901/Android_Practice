@@ -1,0 +1,20 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+<!--    액션바 제거 DarkActionBar -> NoActionBar-->
+    <style name="Theme.FastCampus_PomodoroTimer" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/purple_500</item>
+        <item name="colorPrimaryVariant">@color/purple_700</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/teal_200</item>
+        <item name="colorSecondaryVariant">@color/teal_700</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+<!--     스테이터스 바도 커스텀, 기존 tools:targetApi="L"은 롤리팝임, 현재 프로젝트는 minSdk는 23 마시멜로라서 롤리팝 이상이니 필요 없다  -->
+        <item name="android:statusBarColor" >@color/pomodoro_red</item>
+        <!-- Customize your theme here. -->
+<!--        윈도우 색 변경으로 레이아웃 색으로 진입하기 전에 하얀색 배경이 뜨는 것을 대응-->
+        <item name="android:windowBackground">@color/pomodoro_red</item>
+    </style>
+</resources>

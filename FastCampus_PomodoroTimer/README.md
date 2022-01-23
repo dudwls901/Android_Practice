@@ -53,8 +53,10 @@ CountDownTimer(피니시타임,틱발생주기){//단위 milliseconds
 
 ```
 
-
-
+### ✅ ConstraintLayout packed(체인 상태의 뷰들을 붙게 만들기)
+```
+app:layout_constraintHorizontal_chainStyle="packed" 
+```
 ### ✅ Structure
 ![image](https://user-images.githubusercontent.com/66052467/150677225-316b5909-f5cd-4d5a-9f2c-f0c0516ec812.png) <br>
 

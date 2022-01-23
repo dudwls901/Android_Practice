@@ -22,16 +22,16 @@
 - Android Studio에서 xml 파일의 내용을 변경할 시, 해당 xml 파일에 대한 binding object만을 메모리에서 바로 갱신하도록 최적화 되어 있다.
   따라서 xml 파일 내용 변경 시 Android Studio에서 이 변경 사항을 바로 적용하기 위해 프로젝트 전체를 rebuild 할 필요가 없다.
 
-#### 그래서 view binding이란?
+## 그래서 view binding이란?
 
 뷰와 상호작용하는 코드를 쉽게 작성할 수 있도록 모듈에 있는 각 XML 레이아웃 파일의 결합 클래스를 생성한다.
 바인딩 클래스와 인스턴스에는 상응하는 레이아웃에 ID가 있는 모든 뷰의 직접 참조가 포함된다.
 즉, 이전 findViewById보다 간결한 코드로, null 안전과 유형 안전을 챙기고, 성능까지 챙길 수 있는 안드로이드 아키텍처 구성요소로서 
 앱 모듈별로 설정하여 사용할 수 있는 기능이다.
 
-### view binding 사용
+## view binding 사용
 
-#### 1.gradle 추가
+### 1.gradle 추가
 <pre>
  <code>
  //Android Studio 4.0 이상
@@ -52,7 +52,7 @@
  </code>
 </pre>
 
-#### 2. viewbind ignore
+### 2. viewbind ignore
 gradle에 추가하면 모든 xml이 레이아웃 별로 무조건 생성된다
 만약 이 레이아웃은 바인딩 클래스가 필요 없다면 아래 속성을 루트 뷰에 추가하면된다.
 <pre>
@@ -61,7 +61,7 @@ gradle에 추가하면 모든 xml이 레이아웃 별로 무조건 생성된다
  </code>
 </pre>
 
-#### 3. 액티비티
+### 3. 액티비티
 각 xml 레이아웃 파일은 파일 이름을 카멜표기법으로 바꾸고 끝에 Binding을 붙인 바인딩 클래스가 생성된다.
 (\_는 무시된다)
 아래 코드가 main_activity.xml이라면 ActivityMainBinding이라는 바인딩 클래스가 생성되고, 루트 뷰에 관한 직접 참조를
@@ -93,7 +93,7 @@ Kotlin에서는 getRoot도 프로퍼티로 사용한다.
  </code>
 </pre>
 
-#### 4. 프래그먼트
+### 4. 프래그먼트
 프래그먼트는 뷰보다 오래 지속되기 때문에, onDestroyView() 메서드에서 바인딩 클래스 인스턴스 참조를 해제해줘야 한다.
 <pre>
  <code>
@@ -120,7 +120,7 @@ Kotlin에서는 getRoot도 프로퍼티로 사용한다.
  </code>
 </pre>
 
-#### 5. include view binding
+### 5. include view binding
 <pre>
  <code>
  //TestActivity

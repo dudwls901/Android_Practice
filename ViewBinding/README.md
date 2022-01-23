@@ -160,17 +160,5 @@ Kotlin에서는 getRoot도 프로퍼티로 사용한다.
         
 ```
 
-<pre>
- <code>
- 
- </code>
-</pre>
-
-<pre>
- <code>
- 
- </code>
-</pre>
-    
     
     

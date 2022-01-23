@@ -64,7 +64,7 @@ gradle에 추가하면 모든 xml이 레이아웃 별로 무조건 생성된다
 #### 3. 액티비티
 각 xml 레이아웃 파일은 파일 이름을 카멜표기법으로 바꾸고 끝에 Binding을 붙인 바인딩 클래스가 생성된다.
 (\_는 무시된다)
-아래 코드가 main_activity.xml이라면 MainActivityBinding이라는 바인딩 클래스가 생성되고, 루트 뷰에 관한 직접 참조를
+아래 코드가 main_activity.xml이라면 ActivityMainBinding이라는 바인딩 클래스가 생성되고, 루트 뷰에 관한 직접 참조를
 제공하는 getRoot() 메소드가 포함된다. 아래 코드에선 getRoot()메서드가 LinearLayout 루트 뷰를 반환하고,
 id가 있는 Textview와 Button을 .name, .button으로 사용할 수 있다. (ImageView는 id가 없으므로 참조할 수 없다.)
 Kotlin에서는 getRoot도 프로퍼티로 사용한다.
@@ -120,13 +120,45 @@ Kotlin에서는 getRoot도 프로퍼티로 사용한다.
  </code>
 </pre>
 
-
+#### 5. include view binding
 <pre>
  <code>
- 
+ //TestActivity
+ class TestActivity : AppCompatActivity() {
+
+    private lateinit var binding : ActivityTestBinding
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        binding = ActivityTestBinding.inflate(layoutInflater)
+        val view = binding.root
+        setContentView(view)
+
+        binding.testBtn.setOnClickListener {  }
+        binding.included.includeTestBtn.setOnClickListener {}
+    }
+}
+
  </code>
 </pre>
+```
 
+//activity_test.xml
+    <include
+        android:id="@+id/included"
+        layout="@layout/included_layout"/>
+    <Button
+        android:id="@+id/testBtn"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+        
+//included_layout.xml
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/include_test_btn"/>
+        
+```
 
 <pre>
  <code>

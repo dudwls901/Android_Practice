@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <fastcampus.chapter1.fastcampus_recorder.SoundVisualizerView
+        android:id="@+id/soundVisualizerView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/recorTimeTv"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/resetBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="RESET"
+        app:layout_constraintBottom_toBottomOf="@id/recordBtn"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/recordBtn"
+        app:layout_constraintTop_toTopOf="@id/recordBtn" />
+
+    <fastcampus.chapter1.fastcampus_recorder.CountUpView
+        android:id="@+id/recorTimeTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:text="00:00"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@id/recordBtn"
+        app:layout_constraintLeft_toLeftOf="@id/recordBtn"
+        app:layout_constraintRight_toRightOf="@id/recordBtn" />
+
+
+    <fastcampus.chapter1.fastcampus_recorder.RecordButton
+        android:id="@+id/recordBtn"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginBottom="50dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:src="@drawable/ic_record"
+        android:scaleType="fitCenter"
+        android:padding="25dp"
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

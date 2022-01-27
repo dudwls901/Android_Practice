@@ -40,8 +40,8 @@
 - 알림음 울린다 : 높음(디폴트)
 - 알림음 없다 : 중간
 - 알림음 없고 상태 표시줄에 표시 x : 낮음
-#### 알림 메시지
-- ==표시 메시지, FCM SDK에서 자동 처리
+#### 알림 메시지(표시 메시지)
+- FCM SDK에서 자동 처리
 - 푸시를 눌러 앱을 들어와야만 뭔가 더 액션을 할 수 있음 -> 여러가지 케이스에 대응 어려움
 
 #### 데이터 메시지
@@ -80,4 +80,5 @@ implementation 'com.google.firebase:firebase-analytics-ktx'<br>
 implementation 'com.google.firebase:firebase-messaging-ktx'<br>
 ![image](https://user-images.githubusercontent.com/66052467/151392676-9c704e20-b148-4d86-9930-f6a5c0f9d33e.png)<br>
 
-
+### Console
+![Untitled (2)](https://user-images.githubusercontent.com/66052467/151393758-803ee538-edaf-4728-a330-0255426586ca.png)<br>

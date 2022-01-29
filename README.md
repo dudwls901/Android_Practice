@@ -40,6 +40,24 @@ onRequestPermissionResults과 같이 사용시 onRequestPermissionResults 빠르
 </details>
 
 <details>
+<summary>📌코틀린 리플렉션(::) (내용 추가 예정)</summary>
+
+리플렉션(::)?
+- 코드를 작성하는 시점에는 런타임상 컴파일된 바이트코드에서 내가 작성한 코드가 어디에 위치해 있는지 알 수 없기 때문에<br>
+  바이트코드를 이용해 내가 참조하려는 값을 찾기 위해 사용<br>
+- Kotlin
+  - SomeClass::class // 클래스 자체를 리플렉션
+  - SomeInstance::class //인스턴스에서 클래스를 리플렉션<br>
+- Java
+  - SomeClass.class // 클래스 자체를 리플렉션
+  - SomeInstance.getClass() // 인스턴스에서 클래스를 리플렉션
+- 클래스 타입의 레퍼런스를 등록할 때 '.java'를 추가해야 하는 경우는 자바로 작성된 API를 코틀린에서 이용할 때임
+- 즉 코틀린에서 자바 API를 이용할 때는 DetailActivity::class.java로 작성
+- 함수 참조도 가능 println(numbers.filter(::isOdd))
+
+</details>
+
+<details>
 <summary>📌사용자가 겪은 버그 대응 방법(크래시)</summary>
 
 Q. 앱 개발 단계에선 이슈 발생 시에 에러 메시지등을 통해 확인하고 대응할 수 있는데<br>
@@ -88,6 +106,13 @@ JSON : JavaScript Object Notation
 - 배열로도 표현 가능
 - json 데이터를 object
 - +gson
+</details>
+
+<details>
+<summary>📌sp vs dp</summary>
+
+sp : 텍스트 사이즈에 주로 사용, 휴대폰 설정에서 텍스트 크기 조절하면 확대 or 축소됨
+dp : 뷰들에 주로 사용, 고정
 </details>
 
 <details>

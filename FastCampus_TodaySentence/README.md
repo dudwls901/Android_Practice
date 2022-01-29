@@ -128,6 +128,33 @@
 ### ✅ QuotePagerAdapter.kt
 ![image](https://user-images.githubusercontent.com/66052467/151650329-f924ab73-0da3-4062-9b97-a5115491cab8.png) <br>
 
+
+[
+{
+"quote":"지식보다 더 중요한 것은 상상력이다.",
+"name":"아인슈타인"
+},
+{
+"quote":"나는 생각한다 고로 나는 존재한다.",
+"name":"데카르트"
+},
+{
+"quote":"산다는 것, 그것은 치열한 전투이다.",
+"name":"로망로랑"
+},
+{
+"quote":"하루에 3 시간을 걸으면 7년 후에 지구를 한 바퀴 돌 수 있다.",
+"name":"사무엘존슨"
+},
+{
+"quote":"언제나 현재에 집중할 수 있다면 행복할것이다.",
+"name":"파울로 코엘료"
+}
+]
+
+![Untitled (4)](https://user-images.githubusercontent.com/66052467/151652210-454509dc-8894-4410-a181-7109bde8716b.png)
+
+
  
  
  

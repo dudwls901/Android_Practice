@@ -6,7 +6,8 @@
 [✅빌더 패턴](https://github.com/dudwls901/Android_Practice/blob/main/BuilderPattern.md)<br><br>
 [✅View Binding](https://github.com/dudwls901/Android_Practice/tree/main/ViewBinding)<br><br>
 [✅컴포즈 찍먹](https://github.com/dudwls901/Android_Practice/tree/main/ComposePractice)<br><br>
-
+[✅FCM(Firebase)](https://github.com/dudwls901/Android_Practice/tree/main/FastCampus_FireBasePractice)<br><br> 
+[✅Remote Config(Firebase)](https://github.com/dudwls901/Android_Practice/tree/main/FastCampus_TodaySentence)<br><br> 
 <!-- 
 [✅]()<br><br> 
 -->

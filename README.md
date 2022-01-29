@@ -8,6 +8,7 @@
 [✅컴포즈 찍먹](https://github.com/dudwls901/Android_Practice/tree/main/ComposePractice)<br><br>
 [✅FCM(Firebase)](https://github.com/dudwls901/Android_Practice/tree/main/FastCampus_FireBasePractice)<br><br> 
 [✅Remote Config(Firebase)](https://github.com/dudwls901/Android_Practice/tree/main/FastCampus_TodaySentence)<br><br> 
+[✅ViewPager2, 무한 스크롤](https://github.com/dudwls901/Android_Practice/tree/main/FastCampus_TodaySentence)<br><br> 
 <!-- 
 [✅]()<br><br> 
 -->

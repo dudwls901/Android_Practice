@@ -40,7 +40,7 @@ onRequestPermissionResults과 같이 사용시 onRequestPermissionResults 빠르
 </details>
 
 <details>
-<summary>📌코틀린 리플렉션(::) (내용 추가 예정)</summary>
+<summary>📌코틀린 리플렉션(::) -> 내용 추가 예정</summary>
 
 리플렉션(::)?
 - 코드를 작성하는 시점에는 런타임상 컴파일된 바이트코드에서 내가 작성한 코드가 어디에 위치해 있는지 알 수 없기 때문에<br>

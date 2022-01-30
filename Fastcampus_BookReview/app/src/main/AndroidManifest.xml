@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="fastcampus.part3.fastcampus_bookreview">
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+<!--  서버에서 받아올 이미지url이 http(암호화되지 않은 평문 프로토콜)인 경우 평문 통신 트래픽을 허용하기 -->
+    <!--        android:usesCleartextTraffic="true"-->
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Fastcampus_BookReview">
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".DetailActivity"/>
+    </application>
+
+</manifest>

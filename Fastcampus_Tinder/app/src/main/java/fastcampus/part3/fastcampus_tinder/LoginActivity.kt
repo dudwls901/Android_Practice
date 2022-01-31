@@ -13,6 +13,7 @@ import com.facebook.login.LoginResult
 import com.google.firebase.auth.FacebookAuthProvider
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
+import com.google.firebase.database.ktx.database
 import com.google.firebase.ktx.Firebase
 import fastcampus.part3.fastcampus_tinder.databinding.ActivityLoginBinding
 
@@ -52,7 +53,7 @@ class LoginActivity : AppCompatActivity() {
                 .addOnCompleteListener(this) { task ->
                     if(task.isSuccessful){
                         //로그인이 성공적으로 완료되면 현재 액티비티를 종료
-                        finish()
+                        handleSuccessLogin()
                     }else{
                         Toast.makeText(this,"로그인에 실패했습니다. 이메일 또는 비밀번호를 확인해주세요.",Toast.LENGTH_SHORT).show()
                     }
@@ -105,7 +106,7 @@ class LoginActivity : AppCompatActivity() {
                 auth.signInWithCredential(credential)
                     .addOnCompleteListener(this@LoginActivity) { task ->
                         if(task.isSuccessful){
-                            finish()
+                            handleSuccessLogin()
                         }
                         else{
                             Toast.makeText(this@LoginActivity, "페이스북 로그인이 실패했습니다.",Toast.LENGTH_SHORT).show()
@@ -126,6 +127,25 @@ class LoginActivity : AppCompatActivity() {
 
 
     private fun getPasswordEmail() = binding.passwordEditText.text.toString()
+
+    private fun handleSuccessLogin(){
+        if(auth.currentUser == null){
+            Toast.makeText(this, "로그인에 실패했습니다.", Toast.LENGTH_SHORT).show()
+            return
+        }
+
+        val userId = auth.currentUser?.uid.orEmpty()
+        //파이어베이스 리얼타임 db는 제이슨 타입으로 저장됨 child child 방식
+        //reference는 최상위, Users라는 child
+        //child(userId) = 없으면 하나 생성되고, 있으면 가져옴
+        //Users 안에 userId 안에 userId란 이름으로 저장
+        //"Users" 키도 전역 상수로 빼놓자
+        val currentUserDB = Firebase.database.reference.child("Users").child(userId)
+        val user = mutableMapOf<String, Any>()
+        user["userId"] = userId
+        currentUserDB.updateChildren(user)
+        finish()
+    }
 
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {

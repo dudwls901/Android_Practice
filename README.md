@@ -26,7 +26,7 @@
 -->
 
 ## 🤷‍♀️Small Tips
-알게 된 작은 팁과 더 공부할 내용들을 모왔습니다.<br>
+알게 된 작은 팁과 더 공부할 내용들을 모습니다.<br>
 사소한 내용도 숙지한다면 차후 주니어 개발자에서 시니어 개발자로 성장하기 위한 좋은 발판이 될 것입니다.<br>
 <details markdown="1">
 <summary>📌다크모드 비활성화(테스트 편의를 위함) </summary>
@@ -127,7 +127,7 @@ dp : 뷰들에 주로 사용, 고정
 </details>
 
 <details>
-<summary>📌서버db vs 로컬db 어떤 데이터를 저장해야 할 까?</summary>
+<summary>📌서버db vs 로컬db 어떤 데이터를 저장해야 할까?</summary>
 데이터 스토어/sharedpreferences - 자동 로그인?
 
 - 로그인 토큰은 안드로이드 마스터키로 박아둬도 됨(키스토어)

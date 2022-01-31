@@ -3,8 +3,12 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Android_Practice/Fastcampus_Tinder/app/src/main/res/layout/activity_like.xml" value="0.2046875" />
+        <entry key="..\:/Android_Practice/Fastcampus_Tinder/app/src/main/res/layout/activity_like.xml" value="0.264" />
         <entry key="..\:/Android_Practice/Fastcampus_Tinder/app/src/main/res/layout/activity_login.xml" value="0.2957427536231884" />
+        <entry key="..\:/Android_Practice/Fastcampus_Tinder/app/src/main/res/layout/activity_main.xml" value="0.2046875" />
+        <entry key="..\:/Android_Practice/Fastcampus_Tinder/app/src/main/res/layout/activity_match.xml" value="0.2046875" />
+        <entry key="..\:/Android_Practice/Fastcampus_Tinder/app/src/main/res/layout/item_card.xml" value="0.2046875" />
+        <entry key="..\:/Android_Practice/Fastcampus_Tinder/app/src/main/res/layout/item_matched_user.xml" value="0.2046875" />
       </map>
     </option>
   </component>

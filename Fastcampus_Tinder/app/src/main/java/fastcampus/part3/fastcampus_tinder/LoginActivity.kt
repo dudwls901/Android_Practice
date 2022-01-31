@@ -1,10 +1,16 @@
 package fastcampus.part3.fastcampus_tinder
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.widget.addTextChangedListener
+import com.facebook.CallbackManager
+import com.facebook.FacebookCallback
+import com.facebook.FacebookException
+import com.facebook.login.LoginResult
+import com.google.firebase.auth.FacebookAuthProvider
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
@@ -16,6 +22,8 @@ class LoginActivity : AppCompatActivity() {
 
     private lateinit var auth: FirebaseAuth
 
+    private lateinit var callbackManager: CallbackManager
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityLoginBinding.inflate(layoutInflater)
@@ -25,9 +33,12 @@ class LoginActivity : AppCompatActivity() {
         auth = Firebase.auth
         //auth = FirebaseAuth.getInstance()
 
+        callbackManager = CallbackManager.Factory.create()
+
         initLoginButton()
         initSignUpButton()
         initEmailAndPasswordEditText()
+        initFacebookLoginButton()
     }
 
     private fun initLoginButton() {
@@ -80,12 +91,48 @@ class LoginActivity : AppCompatActivity() {
             binding.loginButton.isEnabled = enable
             binding.signUpButton.isEnabled = enable
         }
+
+    }
+
+    private fun initFacebookLoginButton(){
+        //페이스북에서 이메일과 프로필 가져오기
+        binding.facebookLoginButton.setPermissions("email", "public_profile")
+        binding.facebookLoginButton.registerCallback(callbackManager, object : FacebookCallback<LoginResult>{
+            override fun onSuccess(result: LoginResult) {
+                // 로그인이 성공적
+                //로그인 액세스 토큰을 가져와서 파이어베이스에 넘기기
+                val credential = FacebookAuthProvider.getCredential(result.accessToken.token)
+                auth.signInWithCredential(credential)
+                    .addOnCompleteListener(this@LoginActivity) { task ->
+                        if(task.isSuccessful){
+                            finish()
+                        }
+                        else{
+                            Toast.makeText(this@LoginActivity, "페이스북 로그인이 실패했습니다.",Toast.LENGTH_SHORT).show()
+                        }
+                    }
+            }
+            override fun onCancel() {
+
+            }
+
+            override fun onError(error: FacebookException?) {
+                Toast.makeText(this@LoginActivity, "페이스북 로그인이 실패했습니다.",Toast.LENGTH_SHORT).show()
+            }
+        })
     }
 
     private fun getInputEmail() = binding.emailEditText.text.toString()
 
 
     private fun getPasswordEmail() = binding.passwordEditText.text.toString()
+
+
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+
+        callbackManager.onActivityResult(requestCode, resultCode, data)
+    }
 
 
     companion object {

@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Fastcampus_Tinder</string>
+    <string name="facebook_app_id">4833574666711735</string>
+    <string name="fb_login_protocol_scheme">fb4833574666711735</string>
 </resources>

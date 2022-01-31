@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import fastcampus.part3.fastcampus_todaysentence.databinding.ItemQuoteBinding
 
 class QuotePagerAdpater(
     private val quotes: List<Quote>,
@@ -14,8 +15,7 @@ class QuotePagerAdpater(
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): QuoteViewHolder =
         QuoteViewHolder(
-            LayoutInflater.from(parent.context)
-                .inflate(R.layout.item_quote, parent, false)
+            ItemQuoteBinding.inflate(LayoutInflater.from(parent.context),parent, false)
         )
 
 
@@ -28,19 +28,17 @@ class QuotePagerAdpater(
     //결국에는 끝이 있긴 함(Int.MAX_VALUE)
     override fun getItemCount() = Int.MAX_VALUE
 
-    class QuoteViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        private val quoteTextView: TextView = itemView.findViewById(R.id.quoteTextView)
-        private val nameTextView : TextView = itemView.findViewById(R.id.nameTextView)
+    class QuoteViewHolder(private val binding: ItemQuoteBinding) : RecyclerView.ViewHolder(binding.root) {
 
         @SuppressLint("SetTextI18n")
         fun bind(quote:Quote, isNameRevealed: Boolean){
-            quoteTextView.text = "\"${quote.quote}\""
+             binding.quoteTextView.text = "\"${quote.quote}\""
             if(isNameRevealed){
-                nameTextView.text = "- ${quote.name}"
+                binding.nameTextView.text = "- ${quote.name}"
                 //리사이클러뷰이기 때문에 재사용할 때 visibility 제대로 처리 안 하면 안 보일 때도 있음
-                nameTextView.visibility = View.VISIBLE
+                binding.nameTextView.visibility = View.VISIBLE
             }else{
-                nameTextView.visibility = View.GONE
+                binding.nameTextView.visibility = View.GONE
             }
 
         }

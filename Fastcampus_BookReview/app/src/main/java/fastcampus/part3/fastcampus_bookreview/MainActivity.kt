@@ -165,12 +165,15 @@ class MainActivity : AppCompatActivity() {
     private fun initHistoryRecyclerView(){
         historyAdapter = HistoryAdapter(historyDeleteClickedListener = {
             deleteSearchKeyword(it)
+        },historyClickedListener ={
+            binding.searchEditText.setText(it)
+            search(it)
         })
-
         binding.historyRecyclerView.layoutManager = LinearLayoutManager(this)
         binding.historyRecyclerView.adapter = historyAdapter
         initSearchEditText()
     }
+
     private fun deleteSearchKeyword(keyword: String){
         Thread{
             db.historyDAO().delete(keyword)

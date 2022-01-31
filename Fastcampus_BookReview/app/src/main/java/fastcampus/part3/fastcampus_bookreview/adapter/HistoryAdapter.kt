@@ -13,7 +13,7 @@ import fastcampus.part3.fastcampus_bookreview.model.History
 
 //Delete 버튼에 대한 이벤트는 메인 액티비티에서 함수 던져서
 //실제로 x버튼의 클릭 리스너가 발생할 때 그 함수를 호출하는 방법
-class HistoryAdapter(val historyDeleteClickedListener: (String) -> Unit) : ListAdapter<History, HistoryAdapter.HistoryItemViewHolder>(diffUtil) {
+class HistoryAdapter(val historyDeleteClickedListener: (String) -> Unit, val historyClickedListener: (String) -> Unit) : ListAdapter<History, HistoryAdapter.HistoryItemViewHolder>(diffUtil) {
     //미리 만들어진 몇 개의 뷰들 = 뷰 홀더
     //미리 만들어진 뷰홀더가 없을 시 새로 생성
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): HistoryItemViewHolder {
@@ -29,6 +29,9 @@ class HistoryAdapter(val historyDeleteClickedListener: (String) -> Unit) : ListA
             binding.historyKeywordTextView.text = historyModel.keyword
             binding.historyKeywordDeleteButton.setOnClickListener {
                 historyDeleteClickedListener(historyModel.keyword.orEmpty())
+            }
+            binding.historyKeywordTextView.setOnClickListener {
+                historyClickedListener(historyModel.keyword.orEmpty())
             }
         }
         //todo 최근 검색어 누르면 바로 검색

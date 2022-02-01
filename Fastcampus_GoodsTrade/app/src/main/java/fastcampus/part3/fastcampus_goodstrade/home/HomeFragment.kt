@@ -1,10 +1,12 @@
 package fastcampus.part3.fastcampus_goodstrade.home
 
 import android.annotation.SuppressLint
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.google.android.material.snackbar.Snackbar
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.database.ChildEventListener
@@ -36,7 +38,6 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
             //디비에 모델 클래스 자체를 db에 올렸댜는 가정이 있기 때문
             val articleModel = snapshot.getValue(ArticleModel::class.java)
             articleModel ?: return
-            articleList.clear()
             articleList.add(articleModel)
             articleAdapter.submitList(articleList)
         }
@@ -55,7 +56,7 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding = FragmentHomeBinding.bind(view)
-
+        articleList.clear()
         articleDB = Firebase.database.reference.child(DB_ARTICLES)
 
         articleAdapter = ArticleAdapter()
@@ -64,6 +65,20 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
         //kotlin context == java getcontext()
         binding.articleRecyclerView.layoutManager = LinearLayoutManager(context)
         binding.articleRecyclerView.adapter = articleAdapter
+
+        binding.addFloatingButton.setOnClickListener{
+            //todo 로그인 기능 구현
+            //fragment에서 context사용하기 : requireContext()
+            //그냥 context사용해도 되는데 nullable이기 때문에 null처리 해주어야 함
+//            if(auth.currentUser != null) {
+                val intent = Intent(requireContext(), AddArticleActivity::class.java)
+                startActivity(intent)
+//            }
+//            else{
+//                Snackbar.make(view, "로그인 후 사용해주세요", Snackbar.LENGTH_LONG).show()
+//            }
+        }
+
         //onViewCreate될 때 디비값 가져와서 붙여놓고 viewCreated될 때마다 addChildeEventListener하면 중복 값이 붙을 수 있음
         //-> eventListener 전역으로 하고, onDestroy에서 리스너 제거
         articleDB.addChildEventListener(listener)

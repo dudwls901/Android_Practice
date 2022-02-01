@@ -4,9 +4,10 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Android_Practice/Fastcampus_GoodsTrade/app/src/main/res/drawable/selector_menu_color.xml" value="0.3287037037037037" />
+        <entry key="..\:/Android_Practice/Fastcampus_GoodsTrade/app/src/main/res/layout/activity_add_article.xml" value="0.2957427536231884" />
         <entry key="..\:/Android_Practice/Fastcampus_GoodsTrade/app/src/main/res/layout/activity_main.xml" value="0.176" />
         <entry key="..\:/Android_Practice/Fastcampus_GoodsTrade/app/src/main/res/layout/fragment_chatlist.xml" value="0.2957427536231884" />
-        <entry key="..\:/Android_Practice/Fastcampus_GoodsTrade/app/src/main/res/layout/fragment_home.xml" value="0.2957427536231884" />
+        <entry key="..\:/Android_Practice/Fastcampus_GoodsTrade/app/src/main/res/layout/fragment_home.xml" value="0.264" />
         <entry key="..\:/Android_Practice/Fastcampus_GoodsTrade/app/src/main/res/layout/fragment_mypage.xml" value="0.2957427536231884" />
         <entry key="..\:/Android_Practice/Fastcampus_GoodsTrade/app/src/main/res/layout/item_article.xml" value="0.2957427536231884" />
         <entry key="..\:/Android_Practice/Fastcampus_GoodsTrade/app/src/main/res/menu/bottom_navigation_menu.xml" value="0.36614583333333334" />

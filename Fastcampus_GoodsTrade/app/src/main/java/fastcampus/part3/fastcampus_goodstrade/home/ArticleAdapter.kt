@@ -12,7 +12,7 @@ import fastcampus.part3.fastcampus_goodstrade.databinding.ItemArticleBinding
 import java.text.SimpleDateFormat
 import java.util.*
 
-class ArticleAdapter : ListAdapter<ArticleModel, ArticleAdapter.ViewHolder>(diffUtil) {
+class ArticleAdapter(val onItemClicked : (ArticleModel) -> Unit) : ListAdapter<ArticleModel, ArticleAdapter.ViewHolder>(diffUtil) {
 
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -36,6 +36,10 @@ class ArticleAdapter : ListAdapter<ArticleModel, ArticleAdapter.ViewHolder>(diff
                 Glide.with(binding.thumbnailImageView)
                     .load(articleModel.imageUrl)
                     .into(binding.thumbnailImageView)
+            }
+
+            binding.root.setOnClickListener {
+                onItemClicked(articleModel)
             }
         }
     }

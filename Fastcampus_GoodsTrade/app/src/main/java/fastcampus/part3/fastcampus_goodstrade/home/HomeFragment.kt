@@ -16,8 +16,11 @@ import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.ktx.database
 import com.google.firebase.ktx.Firebase
 import fastcampus.part3.fastcampus_goodstrade.R
+import fastcampus.part3.fastcampus_goodstrade.chatlist.ChatListItem
 import fastcampus.part3.fastcampus_goodstrade.databinding.FragmentHomeBinding
+import fastcampus.part3.fastcampus_goodstrade.key.DBKey.Companion.CHILD_CHAT
 import fastcampus.part3.fastcampus_goodstrade.key.DBKey.Companion.DB_ARTICLES
+import fastcampus.part3.fastcampus_goodstrade.key.DBKey.Companion.DB_USERS
 
 class HomeFragment : Fragment(R.layout.fragment_home) {
 
@@ -26,6 +29,8 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
     private lateinit var articleAdapter :ArticleAdapter
 
     private lateinit var articleDB: DatabaseReference
+
+    private lateinit var userDB: DatabaseReference
 
     //onViewCreated할 때 뷰 자체는 새로 만들어졌지만 전역변수는 mainActivity에서
     // HomeFragment인스턴스를 그대로 가지고 있고 프래그먼트 뷰만 초기화하기 때문에
@@ -58,8 +63,42 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
         binding = FragmentHomeBinding.bind(view)
         articleList.clear()
         articleDB = Firebase.database.reference.child(DB_ARTICLES)
+        userDB = Firebase.database.reference.child(DB_USERS)
+        //itemclick 구현
+        articleAdapter = ArticleAdapter(onItemClicked = { articleModel ->
+            if(auth.currentUser!=null){
+                //로그인을 한 상태
+                if(auth.currentUser?.uid != articleModel.sellerId){
+                    val chatRoom = ChatListItem(
+                        buyerId = auth.currentUser!!.uid,
+                        sellerId = articleModel.sellerId,
+                        itemTitle = articleModel.title,
+                        key = System.currentTimeMillis()
+                    )
 
-        articleAdapter = ArticleAdapter()
+                    userDB.child(auth.currentUser!!.uid)
+                        .child(CHILD_CHAT)
+                        .push()
+                        .setValue(chatRoom)
+
+                    userDB.child(articleModel.sellerId)
+                        .child(CHILD_CHAT)
+                        .push()
+                        .setValue(chatRoom)
+
+                    Snackbar.make(view, "채팅방이 생성되었습니다. 채팅탭에서 확인해주세요.", Snackbar.LENGTH_LONG).show()
+                }
+                else{
+                    Snackbar.make(view, "내가 올린 아이템입니다.", Snackbar.LENGTH_LONG).show()
+                }
+            }
+            else{
+                //로그인을 안 한 상태
+                Snackbar.make(view, "로그인 후 사용해주세요", Snackbar.LENGTH_LONG).show()
+            }
+
+
+        })
 
         //fragment는 context가 될 수 없음
         //kotlin context == java getcontext()
@@ -70,13 +109,13 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
             //todo 로그인 기능 구현
             //fragment에서 context사용하기 : requireContext()
             //그냥 context사용해도 되는데 nullable이기 때문에 null처리 해주어야 함
-//            if(auth.currentUser != null) {
+            if(auth.currentUser != null) {
                 val intent = Intent(requireContext(), AddArticleActivity::class.java)
                 startActivity(intent)
-//            }
-//            else{
-//                Snackbar.make(view, "로그인 후 사용해주세요", Snackbar.LENGTH_LONG).show()
-//            }
+            }
+            else{
+                Snackbar.make(view, "로그인 후 사용해주세요", Snackbar.LENGTH_LONG).show()
+            }
         }
 
         //onViewCreate될 때 디비값 가져와서 붙여놓고 viewCreated될 때마다 addChildeEventListener하면 중복 값이 붙을 수 있음

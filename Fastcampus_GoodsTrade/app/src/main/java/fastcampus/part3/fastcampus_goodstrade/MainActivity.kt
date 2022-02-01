@@ -2,6 +2,7 @@ package fastcampus.part3.fastcampus_goodstrade
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatDelegate
 import androidx.fragment.app.Fragment
 import fastcampus.part3.fastcampus_goodstrade.chatlist.ChatListFragment
 import fastcampus.part3.fastcampus_goodstrade.databinding.ActivityMainBinding
@@ -14,6 +15,7 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 

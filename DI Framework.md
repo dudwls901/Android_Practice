@@ -1,4 +1,4 @@
-#DI Framework
+# DI Framework
 ## 의존성 주입?
 - 의존성 주입(DI, Dependency Injection) : 하나의 객체에 다른 객체의 의존성을 제공하는 기술
 - 하나의 객체에 다른 객체의 의존성을 제공하는 기술

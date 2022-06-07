@@ -9,6 +9,7 @@
 [✅FCM(Firebase)](https://github.com/dudwls901/Android_Practice/tree/main/FastCampus_FireBasePractice)<br><br> 
 [✅Remote Config(Firebase)](https://github.com/dudwls901/Android_Practice/tree/main/FastCampus_TodaySentence)<br><br> 
 [✅ViewPager2, 무한 스크롤](https://github.com/dudwls901/Android_Practice/tree/main/FastCampus_TodaySentence)<br><br> 
+[✅일회성 옵저버](https://github.com/dudwls901/Android_Practice/blob/main/TodoMVVM/README.md)<br><br> 
 <!-- 
 [✅]()<br><br> 
 -->
@@ -220,6 +221,15 @@ thems.xml
 ```
 <item name="android:statusBarColor">@color/white</item>
 <item name="android:windowLightStatusBar">true</item>
+```
+
+🖐 키보드 밀리는 동작 관련<br>
+manifest.xml
+```
+        <activity
+            android:windowSoftInputMode="adjustPan" // 안 밀림, 디폴트 값은 
+            android:name=".MainActivity"
+            android:exported="true">
 ```
 
 </details>

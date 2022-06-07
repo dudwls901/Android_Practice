@@ -17,10 +17,6 @@ import com.hackerton.todomvvm.databinding.FragmentListBinding
 import com.hackerton.todomvvm.fragments.SharedViewModel
 import com.hackerton.todomvvm.fragments.list.adapter.ListAdapter
 import com.hackerton.todomvvm.utils.observeOnce
-import jp.wasabeef.recyclerview.animators.LandingAnimator
-import jp.wasabeef.recyclerview.animators.SlideInRightAnimator
-import jp.wasabeef.recyclerview.animators.SlideInUpAnimator
-import java.text.FieldPosition
 
 class ListFragment : Fragment(), SearchView.OnQueryTextListener {
 
@@ -55,6 +51,7 @@ class ListFragment : Fragment(), SearchView.OnQueryTextListener {
         mToDoViewModel.getAllData.observe(viewLifecycleOwner) { data ->
             mSharedViewModel.checkIfDatabaseEmpty(data)
             adapter.setData(data)
+            binding.recyclerView.scheduleLayoutAnimation()
         }
     }
 
@@ -67,9 +64,6 @@ class ListFragment : Fragment(), SearchView.OnQueryTextListener {
     private fun setUpRecyclerview() {
         binding.recyclerView.adapter = adapter
         binding.recyclerView.layoutManager = StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL)
-        binding.recyclerView.itemAnimator = SlideInRightAnimator().apply {
-            addDuration = 300
-        }
 
         swipeToDelete()
     }

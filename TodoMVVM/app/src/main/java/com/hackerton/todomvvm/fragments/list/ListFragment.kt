@@ -2,6 +2,7 @@ package com.hackerton.todomvvm.fragments.list
 
 import android.app.AlertDialog
 import android.os.Bundle
+import android.util.Log
 import android.view.*
 import androidx.appcompat.widget.SearchView
 import android.widget.Toast
@@ -15,6 +16,7 @@ import com.hackerton.todomvvm.data.viewmodel.ToDoViewModel
 import com.hackerton.todomvvm.databinding.FragmentListBinding
 import com.hackerton.todomvvm.fragments.SharedViewModel
 import com.hackerton.todomvvm.fragments.list.adapter.ListAdapter
+import com.hackerton.todomvvm.utils.observeOnce
 import jp.wasabeef.recyclerview.animators.LandingAnimator
 import jp.wasabeef.recyclerview.animators.SlideInRightAnimator
 import jp.wasabeef.recyclerview.animators.SlideInUpAnimator
@@ -165,8 +167,9 @@ class ListFragment : Fragment(), SearchView.OnQueryTextListener {
     private fun searchThroughDatabase(query: String) {
         val searchQuery = "%$query%"
         //searchQuery를 포함한 title 검색
-        mToDoViewModel.searchDatabase(searchQuery).observe(viewLifecycleOwner){ list->
+        mToDoViewModel.searchDatabase(searchQuery).observeOnce(viewLifecycleOwner){ list->
             list?.let {
+                Log.d("listfragment", "searchThroughDatabase: ")
                 adapter.setData(it)
             }
         }

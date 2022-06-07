@@ -49,22 +49,6 @@ fun <T> LiveData<T>.observeOnce(lifecycleOwner: LifecycleOwner, observer: Observ
 
 + BindAdapter 야무지게 써먹기~
 ```kotlin
-package com.hackerton.todomvvm.fragments
-
-import android.view.View
-import android.widget.Spinner
-import androidx.cardview.widget.CardView
-import androidx.constraintlayout.widget.ConstraintLayout
-import androidx.core.view.isVisible
-import androidx.databinding.BindingAdapter
-import androidx.lifecycle.MutableLiveData
-import androidx.navigation.findNavController
-import com.google.android.material.floatingactionbutton.FloatingActionButton
-import com.hackerton.todomvvm.R
-import com.hackerton.todomvvm.data.ToDoDatabase
-import com.hackerton.todomvvm.data.model.Priority
-import com.hackerton.todomvvm.data.model.ToDoData
-import com.hackerton.todomvvm.fragments.list.ListFragmentDirections
 
 class BindingAdapters {
 

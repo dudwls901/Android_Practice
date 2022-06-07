@@ -69,7 +69,6 @@ class PhotoFrameActivity : AppCompatActivity() {
     override fun onStop() {
         super.onStop()
         timer?.cancel()
-        Log.d("tttt","onStop")
     }
 
     //oncreate는 한 번만 호출되기 때문에 onstop에서 다시 onstart에서 오는경우는 대응 불가
@@ -77,13 +76,11 @@ class PhotoFrameActivity : AppCompatActivity() {
     override fun onStart() {
         super.onStart()
         startTimer()
-        Log.d("tttt","onStart")
     }
 
     override fun onDestroy() {
         super.onDestroy()
         timer?.cancel()
-        Log.d("tttt","onDestroy")
     }
 
     override fun onRestart() {

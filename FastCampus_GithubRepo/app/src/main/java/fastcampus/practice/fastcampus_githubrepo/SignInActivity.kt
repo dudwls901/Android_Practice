@@ -80,7 +80,7 @@ class SignInActivity : AppCompatActivity(), CoroutineScope{
         intent.data?.getQueryParameter("code")?.let { code ->
             GlobalScope.launch {
                 showProgress()
-                //getAccessToken 함수는 suspend이기 때문에 join 안 써도 받아올 때까지 기다림
+                //getAccessToken 함수는 withcontext이기 때문에 join 안 써도 받아올 때까지 기다림
                 getAccessToken(code)
                 dismissProgress()
                 if (checkAuthCodeExist()) {

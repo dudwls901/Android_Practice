@@ -24,7 +24,7 @@ class QuotePagerAdpater(
         holder.bind(quotes[actualPosition],isNameRevealed)
     }
     //무한 스크롤(페이징)의 무난한 방식
-    //getItemCount에 큰값을 줘서 많은 값이 있다고 어댑터 속이기
+    //getItemCount에 큰값을 줘서 많은 값이     있다고 어댑터 속이기
     //결국에는 끝이 있긴 함(Int.MAX_VALUE)
     override fun getItemCount() = Int.MAX_VALUE
 

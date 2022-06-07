@@ -1,5 +1,6 @@
 package fastcampus.part3.fastcampus_tinder
 
+import fastcampus.part3.fastcampus_tinder.BuildConfig
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

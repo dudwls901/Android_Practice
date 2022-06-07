@@ -23,7 +23,6 @@ class SearchActivity : AppCompatActivity(), CoroutineScope {
 
     private lateinit var adapter: RepositoryRecyclerAdapter
 
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivitySearchBinding.inflate(layoutInflater)
@@ -63,7 +62,7 @@ class SearchActivity : AppCompatActivity(), CoroutineScope {
 
     private fun setData(items : List<GithubRepoEntity>){
         adapter.setRepositoryList(items){
-            Toast.makeText(this, "entity : ${it.toString()}", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, "entity : $it", Toast.LENGTH_SHORT).show()
             startActivity(
                 Intent(this, RepositoryActivity::class.java).apply{
                     putExtra(RepositoryActivity.REPOSITORY_OWNER_KEY, it.owner.login)

@@ -16,6 +16,7 @@ import androidx.core.content.ContextCompat
 
 class MainActivity : AppCompatActivity() {
 
+
     private val startPhotoBtn : Button by lazy{
         findViewById<Button>(R.id.startPhotoFrameModeBtn)
     }
@@ -45,7 +46,7 @@ class MainActivity : AppCompatActivity() {
         initStartPhotoFrameModeButton()
     }
 
-    //onCreat 내의 코드를 줄이기 위해 함수로
+    //onCreate 내의 코드를 줄이기 위해 함수로
     private fun initAddPhotoButton() {
         addPhotoBtn.setOnClickListener {
             when{

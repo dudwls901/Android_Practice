@@ -1,5 +1,5 @@
 # Kotlin + Java / Android 공부 레포
-
+<!-- mac test -->
 
 ## 📗Studied
 [✅Room](https://github.com/dudwls901/Android_Practice/tree/main/Room) <br><br>
@@ -196,6 +196,9 @@ plugins {
 
 <details markdown="1">
 <summary>🟩 xml skill </summary>
+🖐 context.resources.getDrawable(R.drawable.more) -> api 22 deprecated <br>
+대응 : ContextCompat.getColor(context,int id) <br>
+val color = ContextCompat.getColor(context,R.color.red) <br>
 
 🖐 텍스트 ... 처리
 <pre>

@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="fastcampus.chapter1.fastcampus_galleryframe">
-
-<!--  이 앱이 READ_EXTERNAL_STORAGE 권한이 필요하다.
+    <!--
+이 앱이 READ_EXTERNAL_STORAGE 권한이 필요하다.
 이전 안드로이드에서는 여기 선언만 해도 플레이스토어에서 앱을 다운 받을 때 물어봤는데
 최근에는 권한이 필요할 때 권한 팝업을 띄우는 방식으로 바뀜
-   -->
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
@@ -15,6 +16,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.FastCampus_GalleryFrame">
+
         <activity
             android:name=".MainActivity"
             android:exported="true">
@@ -23,10 +25,11 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-<!--액자 가로모드 고정-->
-        <activity android:name=".PhotoFrameActivity"
-   />
+        </activity> <!-- 액자 가로모드 고정 -->
+        <activity
+            android:name=".PhotoFrameActivity"
+            android:screenOrientation="landscape" />
+
     </application>
 
 </manifest>

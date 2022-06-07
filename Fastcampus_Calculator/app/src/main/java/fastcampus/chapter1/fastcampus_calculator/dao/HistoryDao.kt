@@ -24,3 +24,6 @@ interface HistoryDao {
 //    @Query("SELECT * FROM history WHERE result LIKE :result LIMIT 1")
 //    fun findByResult(result : String) : History
 }
+
+
+

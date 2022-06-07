@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".second.view.MaterialCalendarActivity">
+
+    <data>
+        <variable
+            name="calendarViewModel"
+            type="fastcampus.practice.callendarcustom.second.view.viewmodel.CalendarViewModel" />
+    </data>
+
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/refreshView"
+    >
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            android:id="@id/button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/calendarView"
+            android:text="exit"
+            />
+
+
+        <com.prolificinteractive.materialcalendarview.MaterialCalendarView
+            android:id="@+id/calendarView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="308dp"
+            android:backgroundTint="#BAE885"
+            android:background="@color/black"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/recyclerView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:mcv_arrowColor="@color/red"
+            app:mcv_headerTextAppearance="@style/CustomHeaderTextAppearance"
+            app:mcv_monthLabels="@style/CustomWeekDayAppearance"
+            app:mcv_selectionColor="#9C4428"
+            app:mcv_showOtherDates="all" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/calendarView"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:items="@{calendarViewModel.date}"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            />
+<!--            app:mcv_arrowColor="@color/red"
+            app:mcv_headerTextAppearance="@color/purple_200"
+            app:mcv_monthLabels="@color/red"
+            app:mcv_selectionColor="#7AFFF3"
+            app:mcv_showOtherDates="all" -->
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+</layout>

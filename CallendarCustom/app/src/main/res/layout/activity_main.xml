@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".MainActivity">
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <Button
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:id="@+id/button"
+        />
+
+<!--    // showOtherDates =  defaults 값은 현재 달만 보여주기-->
+<!--    // all은 이전, 다음 달 날짜 일부도 회색으로 보여줌 -> 주말에 커스텀한 색은 더 옅게 따로 처리해주어야함 ->-->
+<!--    // 이전달의 날자와 다음달 날짜의 일부를 보여주는 옵션도 가능합-->
+    <com.prolificinteractive.materialcalendarview.MaterialCalendarView
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/calendarView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:mcv_showOtherDates="all"
+        app:mcv_selectionColor="#8BC34A"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:mcv_monthLabels="@color/red"
+        app:mcv_weekDayTextAppearance="@color/white"
+        app:mcv_headerTextAppearance="@color/purple_200"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+<!--안먹음
+      app:mcv_dateTextAppearance="@color/yellow"
+        app:mcv_headerTextAppearance="@color/blue"
+        app:mcv_weekDayLabels="@color/red"-->
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

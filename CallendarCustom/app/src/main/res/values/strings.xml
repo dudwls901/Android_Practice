@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">CallendarCustom</string>
+    <string name="date_format">%s.%d.%d</string>
+</resources>

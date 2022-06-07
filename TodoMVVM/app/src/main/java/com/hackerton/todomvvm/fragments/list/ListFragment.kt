@@ -3,7 +3,7 @@ package com.hackerton.todomvvm.fragments.list
 import android.app.AlertDialog
 import android.os.Bundle
 import android.view.*
-import android.widget.SearchView
+import androidx.appcompat.widget.SearchView
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
@@ -105,6 +105,11 @@ class ListFragment : Fragment(), SearchView.OnQueryTextListener {
 
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
         inflater.inflate(R.menu.list_fragment_menu, menu)
+
+        val search = menu.findItem(R.id.menu_search)
+        val searchView = search.actionView as? SearchView
+        searchView?.isSubmitButtonEnabled = true
+        searchView?.setOnQueryTextListener(this)
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
@@ -131,6 +136,17 @@ class ListFragment : Fragment(), SearchView.OnQueryTextListener {
         builder.create().show()
     }
 
+    /*
+    * 검색 기능 구현
+    * 1.SearchView.OnQueryTextListener 상속
+    * 2.onQueryTextSubmit, onQueryTextChange 오버라이딩
+    * 3.searchQuery 실행하여 data받아오고 observe하여 리사이클러뷰 어댑터에 갱신
+    * 4.searchView에 리스너 연결
+    * import androidx.appcompat.widget.SearchView
+    * import android.widget.SearchView가 자동 import됨에 주의
+    * */
+
+    //press Enter
     override fun onQueryTextSubmit(query: String?): Boolean {
         if(query != null){
             searchThroughDatabase(query)
@@ -138,9 +154,17 @@ class ListFragment : Fragment(), SearchView.OnQueryTextListener {
         return true
     }
 
+    //typing
+    override fun onQueryTextChange(query: String?): Boolean {
+        if(query != null){
+            searchThroughDatabase(query)
+        }
+        return true
+    }
+
     private fun searchThroughDatabase(query: String) {
-        var searchQuery = query
-        searchQuery = "%$searchQuery%"
+        val searchQuery = "%$query%"
+        //searchQuery를 포함한 title 검색
         mToDoViewModel.searchDatabase(searchQuery).observe(viewLifecycleOwner){ list->
             list?.let {
                 adapter.setData(it)
@@ -148,10 +172,4 @@ class ListFragment : Fragment(), SearchView.OnQueryTextListener {
         }
     }
 
-    override fun onQueryTextChange(query: String?): Boolean {
-        if(query != null){
-            searchThroughDatabase(query)
-        }
-        return true
-    }
 }

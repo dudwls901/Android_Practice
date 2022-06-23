@@ -197,6 +197,16 @@ plugins {
 
 <details markdown="1">
 <summary>🟩 xml skill </summary>
+
+
+🖐 Theme 기본
+```
+<item name="colorPrimary">: 액션 바의 배경색
+<item name="colorPrimaryDark">: 상태 바의 배경색
+<item name="android:windowBackground">: 액티비티의 기본 배경색
+<item name="android:textColor">: 액티비티의 텍스트 색상
+```
+
 🖐 context.resources.getDrawable(R.drawable.more) -> api 22 deprecated <br>
 대응 : ContextCompat.getColor(context,int id) <br>
 val color = ContextCompat.getColor(context,R.color.red) <br>

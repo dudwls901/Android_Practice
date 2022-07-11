@@ -9,6 +9,7 @@
 [✅FCM(Firebase)](https://github.com/dudwls901/Android_Practice/tree/main/FastCampus_FireBasePractice)<br><br> 
 [✅Remote Config(Firebase)](https://github.com/dudwls901/Android_Practice/tree/main/FastCampus_TodaySentence)<br><br> 
 [✅ViewPager2, 무한 스크롤](https://github.com/dudwls901/Android_Practice/tree/main/FastCampus_TodaySentence)<br><br> 
+[✅일회성 옵저버](https://github.com/dudwls901/Android_Practice/blob/main/TodoMVVM/README.md)<br><br> 
 <!-- 
 [✅]()<br><br> 
 -->
@@ -196,6 +197,16 @@ plugins {
 
 <details markdown="1">
 <summary>🟩 xml skill </summary>
+
+
+🖐 Theme 기본
+```
+<item name="colorPrimary">: 액션 바의 배경색
+<item name="colorPrimaryDark">: 상태 바의 배경색
+<item name="android:windowBackground">: 액티비티의 기본 배경색
+<item name="android:textColor">: 액티비티의 텍스트 색상
+```
+
 🖐 context.resources.getDrawable(R.drawable.more) -> api 22 deprecated <br>
 대응 : ContextCompat.getColor(context,int id) <br>
 val color = ContextCompat.getColor(context,R.color.red) <br>
@@ -220,6 +231,15 @@ thems.xml
 ```
 <item name="android:statusBarColor">@color/white</item>
 <item name="android:windowLightStatusBar">true</item>
+```
+
+🖐 키보드 밀리는 동작 관련<br>
+manifest.xml
+```
+        <activity
+            android:windowSoftInputMode="adjustPan" // 안 밀림, 디폴트 값은 
+            android:name=".MainActivity"
+            android:exported="true">
 ```
 
 </details>

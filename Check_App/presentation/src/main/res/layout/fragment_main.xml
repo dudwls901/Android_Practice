@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_color"
+    android:padding="25dp"
+    tools:context=".view.MainFragment">
+
+    <TextView
+        android:id="@+id/titleTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="@string/main_title"
+        android:textSize="30sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/main_start_btn_frame"
+        android:padding="10dp"
+        android:text="@string/check_suited"
+        android:textColor="@color/main_color"
+        android:textStyle="bold"
+        android:textSize="17sp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="@id/titleTextView"
+        app:layout_constraintTop_toBottomOf="@id/titleTextView" />
+
+    <ImageView
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:src="@drawable/ic_love"
+        app:layout_constraintStart_toEndOf="@id/titleTextView"
+        app:layout_constraintTop_toTopOf="@id/titleTextView"
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

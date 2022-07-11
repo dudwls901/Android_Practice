@@ -1,0 +1,15 @@
+<resources>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="header">이름 궁합</string>
+    <string name="main_title">이름으로\n궁합을\n확인해 보세요.</string>
+    <string name="check_suited">궁합 보러가기</string>
+    <string name="input_man_name">남자의 이름을 입력해 주세요.</string>
+    <string name="input_name">이름을 입력하세요.</string>
+    <string name="show_suited">궁합보기</string>
+    <string name="input_woman_name">여자의 이름을 입력해 주세요</string>
+    <string name="next">다음으로</string>
+    <string name="suited_score">100</string>
+    <string name="suited_text">엄청난 일인데요?!</string>
+    <string name="move_main">메인으로</string>
+</resources>

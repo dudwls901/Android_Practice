@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AndroidLayouts">
+    <shared>
+      <config />
+    </shared>
+  </component>
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="NONE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="d216b574-fdc3-4ca9-a37f-b7ee09f97ef4" name="Default Changelist" comment="[Feat] INTERNET 퍼미션 추가">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/Check_App/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/Check_App/.idea/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Check_App/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Check_App/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Check_App/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Check_App/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/Check_App/app/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/Check_App/app/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/proguard-rules.pro" beforeDir="false" afterPath="$PROJECT_DIR$/Check_App/app/proguard-rules.pro" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/androidTest/java/com/clean/check_app/ExampleInstrumentedTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/Check_App/app/src/androidTest/java/com/clean/check_app/ExampleInstrumentedTest.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Check_App/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/clean/check_app/MainActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/Check_App/app/src/main/java/com/clean/check_app/MainActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Check_App/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/ic_launcher_background.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Check_App/app/src/main/res/drawable/ic_launcher_background.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Check_App/app/src/main/res/layout/activity_main.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Check_App/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Check_App/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-hdpi/ic_launcher.webp" beforeDir="false" afterPath="$PROJECT_DIR$/Check_App/app/src/main/res/mipmap-hdpi/ic_launcher.webp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-hdpi/ic_launcher_round.webp" beforeDir="false" afterPath="$PROJECT_DIR$/Check_App/app/src/main/res/mipmap-hdpi/ic_launcher_round.webp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-mdpi/ic_launcher.webp" beforeDir="false" afterPath="$PROJECT_DIR$/Check_App/app/src/main/res/mipmap-mdpi/ic_launcher.webp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-mdpi/ic_launcher_round.webp" beforeDir="false" afterPath="$PROJECT_DIR$/Check_App/app/src/main/res/mipmap-mdpi/ic_launcher_round.webp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-xhdpi/ic_launcher.webp" beforeDir="false" afterPath="$PROJECT_DIR$/Check_App/app/src/main/res/mipmap-xhdpi/ic_launcher.webp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-xhdpi/ic_launcher_round.webp" beforeDir="false" afterPath="$PROJECT_DIR$/Check_App/app/src/main/res/mipmap-xhdpi/ic_launcher_round.webp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-xxhdpi/ic_launcher.webp" beforeDir="false" afterPath="$PROJECT_DIR$/Check_App/app/src/main/res/mipmap-xxhdpi/ic_launcher.webp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.webp" beforeDir="false" afterPath="$PROJECT_DIR$/Check_App/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.webp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-xxxhdpi/ic_launcher.webp" beforeDir="false" afterPath="$PROJECT_DIR$/Check_App/app/src/main/res/mipmap-xxxhdpi/ic_launcher.webp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.webp" beforeDir="false" afterPath="$PROJECT_DIR$/Check_App/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.webp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values-night/themes.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Check_App/app/src/main/res/values-night/themes.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Check_App/app/src/main/res/values/colors.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Check_App/app/src/main/res/values/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/themes.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Check_App/app/src/main/res/values/themes.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/test/java/com/clean/check_app/ExampleUnitTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/Check_App/app/src/test/java/com/clean/check_app/ExampleUnitTest.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/Check_App/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/buildSrc/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/Check_App/buildSrc/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/buildSrc/src/main/java/Dependency.kt" beforeDir="false" afterPath="$PROJECT_DIR$/Check_App/buildSrc/src/main/java/Dependency.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/Check_App/data/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/Check_App/data/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/consumer-rules.pro" beforeDir="false" afterPath="$PROJECT_DIR$/Check_App/data/consumer-rules.pro" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/proguard-rules.pro" beforeDir="false" afterPath="$PROJECT_DIR$/Check_App/data/proguard-rules.pro" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/src/androidTest/java/com/clean/data/ExampleInstrumentedTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/Check_App/data/src/androidTest/java/com/clean/data/ExampleInstrumentedTest.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Check_App/data/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/src/test/java/com/clean/data/ExampleUnitTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/Check_App/data/src/test/java/com/clean/data/ExampleUnitTest.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/domain/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/Check_App/domain/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/domain/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/Check_App/domain/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/domain/consumer-rules.pro" beforeDir="false" afterPath="$PROJECT_DIR$/Check_App/domain/consumer-rules.pro" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/domain/proguard-rules.pro" beforeDir="false" afterPath="$PROJECT_DIR$/Check_App/domain/proguard-rules.pro" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/domain/src/androidTest/java/com/clean/domain/ExampleInstrumentedTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/Check_App/domain/src/androidTest/java/com/clean/domain/ExampleInstrumentedTest.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/domain/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Check_App/domain/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/domain/src/test/java/com/clean/domain/ExampleUnitTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/Check_App/domain/src/test/java/com/clean/domain/ExampleUnitTest.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradle.properties" beforeDir="false" afterPath="$PROJECT_DIR$/Check_App/gradle.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" afterPath="$PROJECT_DIR$/Check_App/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/Check_App/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradlew" beforeDir="false" afterPath="$PROJECT_DIR$/Check_App/gradlew" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradlew.bat" beforeDir="false" afterPath="$PROJECT_DIR$/Check_App/gradlew.bat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/presentation/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/Check_App/presentation/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/presentation/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/Check_App/presentation/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/presentation/consumer-rules.pro" beforeDir="false" afterPath="$PROJECT_DIR$/Check_App/presentation/consumer-rules.pro" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/presentation/proguard-rules.pro" beforeDir="false" afterPath="$PROJECT_DIR$/Check_App/presentation/proguard-rules.pro" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/presentation/src/androidTest/java/com/clean/presentation/ExampleInstrumentedTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/Check_App/presentation/src/androidTest/java/com/clean/presentation/ExampleInstrumentedTest.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/presentation/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Check_App/presentation/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/presentation/src/test/java/com/clean/presentation/ExampleUnitTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/Check_App/presentation/src/test/java/com/clean/presentation/ExampleUnitTest.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/settings.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/Check_App/settings.gradle" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[/Users/yeongjin/.android/avd/Pixel_4_API_30.avd]" />
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Kotlin Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="2Bnc1gabuudFyK9pa48yR3NbRey" />
+  <component name="ProjectViewState">
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="RunOnceActivity.cidr.known.project.marker" value="true" />
+    <property name="cidr.known.project.marker" value="true" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.17" />
+    <property name="project.structure.side.proportion" value="0.2" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Check_App" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="app" type="AndroidRunConfigurationType" factoryName="Android App">
+      <module name="Check_App.app" />
+      <option name="DEPLOY" value="true" />
+      <option name="DEPLOY_APK_FROM_BUNDLE" value="false" />
+      <option name="DEPLOY_AS_INSTANT" value="false" />
+      <option name="ARTIFACT_NAME" value="" />
+      <option name="PM_INSTALL_OPTIONS" value="" />
+      <option name="ALL_USERS" value="false" />
+      <option name="ALWAYS_INSTALL_WITH_PM" value="false" />
+      <option name="DYNAMIC_FEATURES_DISABLED_LIST" value="" />
+      <option name="ACTIVITY_EXTRA_FLAGS" value="" />
+      <option name="MODE" value="default_activity" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
+      <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
+      <option name="FORCE_STOP_RUNNING_APP" value="true" />
+      <option name="INSPECTION_WITHOUT_ACTIVITY_RESTART" value="false" />
+      <option name="TARGET_SELECTION_MODE" value="DEVICE_AND_SNAPSHOT_COMBO_BOX" />
+      <option name="SELECTED_CLOUD_MATRIX_CONFIGURATION_ID" value="-1" />
+      <option name="SELECTED_CLOUD_MATRIX_PROJECT_ID" value="" />
+      <option name="DEBUGGER_TYPE" value="Auto" />
+      <Auto>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Auto>
+      <Hybrid>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Hybrid>
+      <Java />
+      <Native>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Native>
+      <Profilers>
+        <option name="ADVANCED_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_CONFIGURATION_NAME" value="Java/Kotlin Method Sample (legacy)" />
+        <option name="STARTUP_NATIVE_MEMORY_PROFILING_ENABLED" value="false" />
+        <option name="NATIVE_MEMORY_SAMPLE_RATE_BYTES" value="2048" />
+      </Profilers>
+      <option name="DEEP_LINK" value="" />
+      <option name="ACTIVITY_CLASS" value="" />
+      <option name="SEARCH_ACTIVITY_IN_GLOBAL_SCOPE" value="false" />
+      <option name="SKIP_ACTIVITY_VALIDATION" value="false" />
+      <method v="2">
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="d216b574-fdc3-4ca9-a37f-b7ee09f97ef4" name="Default Changelist" comment="" />
+      <created>1657545075985</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1657545075985</updated>
+    </task>
+    <task id="LOCAL-00001" summary="[Feat] presentation, domain, data 모듈 생성, buildSrc(kotlin-dsl)생성">
+      <created>1657545509705</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1657545509705</updated>
+    </task>
+    <task id="LOCAL-00002" summary="[Feat] Dependency.kt 추가">
+      <created>1657545867294</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1657545867294</updated>
+    </task>
+    <task id="LOCAL-00003" summary="[Feat]">
+      <created>1657546050587</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1657546050587</updated>
+    </task>
+    <task id="LOCAL-00004" summary="[Feat] 프로젝트 gradle 추가">
+      <created>1657546059262</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1657546059262</updated>
+    </task>
+    <task id="LOCAL-00005" summary="[Feat] 모듈 단위 gradle추가, settings.gradle 추가">
+      <created>1657546701287</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1657546701287</updated>
+    </task>
+    <task id="LOCAL-00006" summary="[Feat] 모듈 단위 gradle추가, settings.gradle 추가">
+      <created>1657546753153</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1657546753153</updated>
+    </task>
+    <task id="LOCAL-00007" summary="[Feat] INTERNET 퍼미션 추가">
+      <created>1657546798737</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1657546798737</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="[Feat] presentation, domain, data 모듈 생성, buildSrc(kotlin-dsl)생성" />
+    <MESSAGE value="[Feat] Dependency.kt 추가" />
+    <MESSAGE value="[Feat]" />
+    <MESSAGE value="[Feat] 프로젝트 gradle 추가" />
+    <MESSAGE value="[Feat] 모듈 단위 gradle추가, settings.gradle 추가" />
+    <MESSAGE value="[Feat] INTERNET 퍼미션 추가" />
+    <option name="LAST_COMMIT_MESSAGE" value="[Feat] INTERNET 퍼미션 추가" />
+  </component>
+</project>

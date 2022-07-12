@@ -35,6 +35,7 @@
                 android:textStyle="bold" />
 
             <EditText
+                android:id="@+id/manNameEditText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
@@ -48,7 +49,7 @@
             android:background="@drawable/name_setting_btn_frame"
             android:gravity="center"
             android:padding="10dp"
-            android:onClick="@{fragment::startBtnClick}"
+            android:onClick="@{fragment::nextBtnClick}"
             android:text="@string/show_suited"
             android:textSize="16sp"
             android:textStyle="bold"

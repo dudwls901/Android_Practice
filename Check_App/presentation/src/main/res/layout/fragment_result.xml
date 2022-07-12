@@ -30,6 +30,7 @@
                 android:src="@drawable/ic_result_love" />
 
             <TextView
+                android:id="@+id/scoreTextView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
@@ -39,6 +40,7 @@
                 android:textStyle="bold" />
 
             <TextView
+                android:id="@+id/scoreMessageTextView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"

@@ -12,4 +12,6 @@
     <string name="suited_score">100</string>
     <string name="suited_text">엄청난 일인데요?!</string>
     <string name="move_main">메인으로</string>
+    <string name="illustrator">illustrator</string>
+    <string name="statistics_state">현재 100% 궁합자 현황</string>
 </resources>

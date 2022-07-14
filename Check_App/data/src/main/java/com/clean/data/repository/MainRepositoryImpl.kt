@@ -5,6 +5,8 @@ import com.clean.data.repository.remote.datasource.MainDataSource
 import com.clean.domain.model.DomainLoveResponse
 import com.clean.domain.repository.MainRepository
 import com.clean.domain.utils.RemoteErrorEmitter
+import com.google.android.gms.tasks.Task
+import com.google.firebase.database.DataSnapshot
 import javax.inject.Inject
 
 class MainRepositoryImpl @Inject constructor(
@@ -19,5 +21,13 @@ class MainRepositoryImpl @Inject constructor(
     ): DomainLoveResponse? {
         //mapper를 이용해 data 계층의 response를 domain 계층의 response로 변환해 주자
         return MainMapper.loveMapper(mainDataSource.checkLoveCalculator(remoteErrorEmitter, host, key, mName, wName))
+    }
+
+    override fun getStatistics(): Task<DataSnapshot> {
+        return mainDataSource.getStatistics()
+    }
+
+    override fun setStatistics(plusValue: Int): Task<Void> {
+        return mainDataSource.setStatistics(plusValue)
     }
 }

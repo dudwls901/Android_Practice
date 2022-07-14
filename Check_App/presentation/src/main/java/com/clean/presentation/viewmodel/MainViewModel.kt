@@ -5,6 +5,8 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.clean.domain.model.DomainLoveResponse
 import com.clean.domain.usecase.CheckLoveCalculatorUseCase
+import com.clean.domain.usecase.GetStatisticsUseCase
+import com.clean.domain.usecase.SetStatisticsUseCase
 import com.clean.domain.utils.ErrorType
 import com.clean.domain.utils.RemoteErrorEmitter
 import com.clean.domain.utils.ScreenState
@@ -15,12 +17,19 @@ import javax.inject.Inject
 
 @HiltViewModel
 class MainViewModel @Inject constructor(
-    private val checkLoveCalculatorUseCase: CheckLoveCalculatorUseCase
+    private val checkLoveCalculatorUseCase: CheckLoveCalculatorUseCase,
+    private val getStatisticsUseCase: GetStatisticsUseCase,
+    private val setStatisticsUseCase: SetStatisticsUseCase
+
 ) : ViewModel(), RemoteErrorEmitter {
 
     private var _apiCallEvent = SingleLiveEvent<ScreenState>()
     val apiCallEvent: LiveData<ScreenState>
         get() = _apiCallEvent
+
+    private var _getStatisticsEvent = SingleLiveEvent<Int>()
+    val getStatisticsEvent: LiveData<Int>
+        get() = _getStatisticsEvent
 
     var apiCallResult = DomainLoveResponse("", "", 0, "")
     var apiErrorType = ErrorType.UNKNOWN
@@ -45,6 +54,14 @@ class MainViewModel @Inject constructor(
         }
     }
 
+    fun setStatistics(plusValue: Int) = setStatisticsUseCase.execute(plusValue)
+
+    fun getStatistics() = getStatisticsUseCase.execute()
+
+    fun getStatisticsDisplay() = getStatisticsUseCase.execute()
+        .addOnSuccessListener {
+            _getStatisticsEvent.postValue(it.value.toString().toInt())
+        }
     override fun onError(msg: String) {
         apiErrorMessage = msg
     }

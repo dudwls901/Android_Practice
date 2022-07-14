@@ -1,6 +1,8 @@
 package com.clean.check_app.di
 
 import com.clean.domain.repository.MainRepository
+import com.clean.domain.repository.SplashRepository
+import com.clean.domain.usecase.CheckAppVersionUseCase
 import com.clean.domain.usecase.CheckLoveCalculatorUseCase
 import dagger.Module
 import dagger.Provides
@@ -17,4 +19,9 @@ class UseCaseModule {
     @Singleton
     fun provideCheckLoveCalculatorUseCases(repository: MainRepository) =
         CheckLoveCalculatorUseCase(repository)
+
+    @Provides
+    @Singleton
+    fun provideCheckAppVersionUseCases(repository: SplashRepository) =
+        CheckAppVersionUseCase(repository)
 }

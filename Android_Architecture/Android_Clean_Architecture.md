@@ -67,7 +67,7 @@
   - 입력을 받아들이고 외부 장치와 소통
 - 맨 바깥은 실제로 입출력에 관련된 것들
 - 안으로 갈수록 고수준이고 외부로부터 보호되어있음
-- 안드로이드 관점에서 해석한 과녁 클린 아키텍처(링크)
+- [안드로이드 관점에서 해석한 과녁 클린 아키텍처](https://github.com/dudwls901/Android_Practice/blob/main/Android_Architecture/%EC%95%88%EB%93%9C%EB%A1%9C%EC%9D%B4%EB%93%9C%20%EA%B4%80%EC%A0%90%20%ED%81%B4%EB%A6%B0%20%EC%95%84%ED%82%A4%ED%85%8D%EC%B2%98.md)
 - 위의 과녁 클린 아키텍처를 모바일에 적용한다면?
 ![Untitled (5)](https://user-images.githubusercontent.com/66052467/184365154-75bba488-f3c1-43ee-8214-fdfccb1de5ff.png)
 - Repository는 Data Layer쪽으로 굳혀진듯?
@@ -125,4 +125,4 @@
 
 ## References
 - TheRED:강사룡의 앱 안정성 및 확장성 강화를 위한 Android 아키텍처
-- 아키텍처를 알아야 앱 개발이 보인다 - 
+- 아키텍처를 알아야 앱 개발이 보인다 - 옥수환

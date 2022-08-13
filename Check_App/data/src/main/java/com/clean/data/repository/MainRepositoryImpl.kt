@@ -3,10 +3,12 @@ package com.clean.data.repository
 import com.clean.data.mapper.MainMapper
 import com.clean.data.repository.remote.datasource.MainDataSource
 import com.clean.domain.model.DomainLoveResponse
+import com.clean.domain.model.DomainScore
 import com.clean.domain.repository.MainRepository
 import com.clean.domain.utils.RemoteErrorEmitter
 import com.google.android.gms.tasks.Task
 import com.google.firebase.database.DataSnapshot
+import com.google.firebase.firestore.QuerySnapshot
 import javax.inject.Inject
 
 class MainRepositoryImpl @Inject constructor(
@@ -29,5 +31,13 @@ class MainRepositoryImpl @Inject constructor(
 
     override fun setStatistics(plusValue: Int): Task<Void> {
         return mainDataSource.setStatistics(plusValue)
+    }
+
+    override fun getScore(): Task<QuerySnapshot> {
+        return mainDataSource.getScore()
+    }
+
+    override fun setScore(score: DomainScore): Task<Void> {
+        return mainDataSource.setScore(MainMapper.scoreMapper(score))
     }
 }

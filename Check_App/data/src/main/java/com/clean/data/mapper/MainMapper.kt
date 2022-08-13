@@ -1,7 +1,9 @@
 package com.clean.data.mapper
 
 import com.clean.data.remote.model.DataLoveResponse
+import com.clean.data.remote.model.DataScore
 import com.clean.domain.model.DomainLoveResponse
+import com.clean.domain.model.DomainScore
 
 object MainMapper {
 
@@ -16,5 +18,16 @@ object MainMapper {
                 result = dataResponse.result
             )
         } else dataResponse
+    }
+
+    fun scoreMapper(
+        domainResponse: DomainScore
+    ) : DataScore{
+        return DataScore(
+            man = domainResponse.man,
+            woman = domainResponse.woman,
+            percentage = domainResponse.percentage,
+            data = domainResponse.data
+        )
     }
 }

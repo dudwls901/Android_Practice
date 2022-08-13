@@ -10,9 +10,8 @@
 [✅Remote Config(Firebase)](https://github.com/dudwls901/Android_Practice/tree/main/FastCampus_TodaySentence)<br><br> 
 [✅ViewPager2, 무한 스크롤](https://github.com/dudwls901/Android_Practice/tree/main/FastCampus_TodaySentence)<br><br> 
 [✅일회성 옵저버](https://github.com/dudwls901/Android_Practice/blob/main/TodoMVVM/README.md)<br><br> 
-<!-- 
-[✅]()<br><br> 
--->
+[✅따닥 클릭 방지](https://github.com/dudwls901/Android_Practice/blob/main/OnSingleClickListener.kt)<br><br> 
+
 <!-- 
 <details>
 <summary>📌</summary>

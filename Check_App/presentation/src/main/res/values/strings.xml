@@ -14,4 +14,9 @@
     <string name="move_main">메인으로</string>
     <string name="illustrator">illustrator</string>
     <string name="statistics_state">현재 100% 궁합자 현황</string>
+    <string name="percentage">확률</string>
+    <string name="man_english">man</string>
+    <string name="man_hangeul">남자</string>
+    <string name="woman_english">woman</string>
+    <string name="woman_hangeul">여자</string>
 </resources>

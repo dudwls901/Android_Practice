@@ -52,6 +52,7 @@
             app:layout_constraintTop_toTopOf="@id/titleTextView" />
 
         <LinearLayout
+            android:id="@+id/totalStatisticsLayout"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="40dp"
@@ -82,9 +83,17 @@
                 android:textSize="20sp"
                 android:textStyle="bold"
                 tools:ignore="HardcodedText" />
-
-
         </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/scoreRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/totalStatisticsLayout"
+            app:layout_constraintBottom_toBottomOf="parent"
+            />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

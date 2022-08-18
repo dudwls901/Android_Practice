@@ -7,15 +7,14 @@ import com.clean.presentation.R
 import com.clean.presentation.base.BaseActivity
 import com.clean.presentation.databinding.ActivityMainBinding
 import com.clean.presentation.viewmodel.MainViewModel
+import com.pss.barlibrary.CustomBar.Companion.setTransparentBar
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
 class MainActivity : BaseActivity<ActivityMainBinding>(R.layout.activity_main) {
     private val mainViewModel by viewModels<MainViewModel>()
 
-
-
     override fun init() {
-
+         setTransparentBar(this)
     }
 }

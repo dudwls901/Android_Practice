@@ -14,6 +14,7 @@ import com.clean.presentation.base.BaseFragment
 import com.clean.presentation.databinding.FragmentMainBinding
 import com.clean.presentation.viewmodel.MainViewModel
 import com.clean.presentation.widget.extension.showVertical
+import com.pss.library.CountNumberEvent.Companion.countNumber
 
 class MainFragment : BaseFragment<FragmentMainBinding>(R.layout.fragment_main) {
 
@@ -33,6 +34,7 @@ class MainFragment : BaseFragment<FragmentMainBinding>(R.layout.fragment_main) {
 
     private fun observeDatas(){
         mainViewModel.getStatisticsEvent.observe(viewLifecycleOwner){
+            countNumber(0,it, binding.statisticsTextView, 3000)
             binding.statisticsTextView.text = it.toString()
         }
 

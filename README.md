@@ -10,9 +10,8 @@
 [✅Remote Config(Firebase)](https://github.com/dudwls901/Android_Practice/tree/main/FastCampus_TodaySentence)<br><br> 
 [✅ViewPager2, 무한 스크롤](https://github.com/dudwls901/Android_Practice/tree/main/FastCampus_TodaySentence)<br><br> 
 [✅일회성 옵저버](https://github.com/dudwls901/Android_Practice/blob/main/TodoMVVM/README.md)<br><br> 
-<!-- 
-[✅]()<br><br> 
--->
+[✅따닥 클릭 방지](https://github.com/dudwls901/Android_Practice/blob/main/OnSingleClickListener.kt)<br><br> 
+[✅Event Wrapper (feat. LiveData)](https://github.com/dudwls901/Android_Practice/blob/main/EventWrapper.kt)<br><br> 
 <!-- 
 <details>
 <summary>📌</summary>
@@ -175,11 +174,6 @@ dp : 뷰들에 주로 사용, 고정
   
 2명이상이 동시에 같은 화면 보면서 편집하는 서비스면 무조건 서버를 통한 동기화가 필요하고, 서버의 disk io를 줄이기 위한 방법은 서버 개발자들이 효율화 시킴
 </details>
-
-
-&nbsp;&nbsp;&nbsp;&nbsp;📌Any : 모든 타입 가능, Unit: 반환문이 없는 함수, Nothing : null이나 예외를 반환하는 함수<br><br>
-&nbsp;&nbsp;&nbsp;&nbsp;📌리사이클러뷰이기 때문에 재사용할 때 visibility 제대로 처리 안 하면 안 보일 때도 있음<br><br>
-&nbsp;&nbsp;&nbsp;&nbsp;📌key 등 보안 중요 파일은 .gitignore를 이용해 제외하고 올리자. 협업시엔 따로 파일 관리 및 공유<br><br>
 <details markdown="1">
 <summary>📌Plugin 추가는 apply plugin이 아닌 id ~로 추가 </summary>
 <br>
@@ -191,6 +185,11 @@ plugins {
 }
 </pre>
 </details>
+
+📌Any : 모든 타입 가능, Unit: 반환문이 없는 함수, Nothing : null이나 예외를 반환하는 함수<br><br>
+📌리사이클러뷰이기 때문에 재사용할 때 visibility 제대로 처리 안 하면 안 보일 때도 있음<br><br>
+📌key 등 보안 중요 파일은 .gitignore를 이용해 제외하고 올리자. 협업시엔 따로 파일 관리 및 공유<br><br>
+
 
 
 
@@ -241,5 +240,20 @@ manifest.xml
             android:name=".MainActivity"
             android:exported="true">
 ```
+
+🖐 하위 뷰 부모 영역 바깥에도 표시하기 (부모 레이아웃에 선언)<br>
+
+```
+        <!-- Defines whether a child is limited to draw inside of its bounds or not.
+             This is useful with animations that scale the size of the children to more
+             than 100% for instance. In such a case, this property should be set to false
+             to allow the children to draw outside of their bounds. The default value of
+             this property is true. -->
+        <attr name="clipChildren" format="boolean" />
+        
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:clipChildren="false">
+```
+[🖐 커스텀뷰-MovableFloatingActionButton](https://github.com/dudwls901/Android_Practice/blob/main/CustomView/MovableFloatingActionButton.kt)<br>
 
 </details>
